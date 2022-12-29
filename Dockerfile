@@ -1,4 +1,4 @@
-FROM maven:3.8-jdk-11-slim
+FROM maven:3.8.6-openjdk-18-slim
 RUN apt update && apt install git -y
 RUN git clone https://github.com/spring-projects/spring-petclinic.git
 WORKDIR ./spring-petclinic
