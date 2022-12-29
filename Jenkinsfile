@@ -11,5 +11,12 @@ pipeline{
                 '''
             }
         }
+        stage('oush'){
+            steps{
+                sh '''
+                docker image push praveenrajnikanth/workshop:shopizer
+                '''
+            }
+        }
     }    
 }
