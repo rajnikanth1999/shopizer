@@ -20,9 +20,7 @@ pipeline{
         }
         stage('kubernetes'){
             steps{
-                sh '''
                 build job 'terraform'
-                '''
             }
         }
     }    
