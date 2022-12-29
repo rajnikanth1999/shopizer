@@ -5,4 +5,4 @@ WORKDIR ./spring-petclinic
 RUN mvn package
 EXPOSE 8080
 WORKDIR ./target/
-CMD ["java","-jar","spring-petclinic-2.7.3.jar"]
+CMD ["java","-jar","spring-petclinic-3.0.0-SNAPSHOT.jar"]
