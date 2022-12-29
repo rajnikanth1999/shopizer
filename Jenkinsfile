@@ -21,7 +21,7 @@ pipeline{
         stage('kubernetes'){
             steps{
                 sh '''
-                build 'terraform'.
+                build 'terraform'
                 '''
             }
         }
