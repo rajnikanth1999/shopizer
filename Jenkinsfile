@@ -18,11 +18,10 @@ pipeline{
                 '''
             }
         }
-        stage('container'){
+        stage('kubernetes'){
             steps{
                 sh '''
-                docker container run -d -P --name spring-petclinic praveenrajnikanth/workshop:shopizer
-                docker container ls
+                build job 'terraform'.
                 '''
             }
         }
