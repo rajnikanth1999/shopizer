@@ -4,9 +4,11 @@ pipeline{
         label 'node'
     }
     stages{
-        stage('clone'){
+        stage('build'){
             steps{
-                sh 'docker info'
+                sh '''
+                docker image build -t praveenrajnikanth/workshop:shopizer .
+                '''
             }
         }
     }    
