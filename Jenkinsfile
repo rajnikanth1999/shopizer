@@ -24,6 +24,8 @@ pipeline{
             steps{
                 dependencyCheck additionalArguments: '--format XML',odcInstallation:'SCA'
                 dependencyCheckPublisher pattern: './*.html'
+                sh 'pwd'
+                sh 'ls'
                 dependencyCheck additionalArguments: '--format HTML',odcInstallation:'SCA'
             }
         }
