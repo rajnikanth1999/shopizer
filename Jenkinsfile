@@ -16,6 +16,8 @@ pipeline{
                 docker build -t test .
                 docker tag test:latest 358434574350.dkr.ecr.us-east-1.amazonaws.com/test:${BUILD_NUMBER}
                 docker push 358434574350.dkr.ecr.us-east-1.amazonaws.com/test:${BUILD_NUMBER}
+                docker container run -d -P 358434574350.dkr.ecr.us-east-1.amazonaws.com/test:${BUILD_NUMBER}
+                docker ps
                 '''
             }
         }
