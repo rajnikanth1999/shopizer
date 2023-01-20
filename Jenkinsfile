@@ -22,7 +22,7 @@ pipeline{
         }
         stage('sca'){
             steps{
-                dependencyCheck additionalArguments: '--format HTML',odcInstallation:'SCA'
+                dependencyCheck additionalArguments: '--format HTML XML',odcInstallation:'SCA'
             }
         }
 }
