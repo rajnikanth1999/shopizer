@@ -22,9 +22,10 @@ pipeline{
         }
         stage('SonarQube Analysis') {
             steps{
-               withSonarQubeEnv(credentialsId: 'sonar') {
-                    mvn sonar:sonar
-                }       
+               sh 'mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=spring \
+  -Dsonar.host.url=http://44.203.73.66:9000 \
+  -Dsonar.login=sqp_408b47bd4385622e0961714478da04d0067f36ab'     
     }    }
 }
 }
