@@ -23,11 +23,7 @@ pipeline{
         stage('sca'){
             steps{
                 dependencyCheck additionalArguments: '--format XML',odcInstallation:'SCA'
-                dependencyCheckPublisher pattern: './**.html'
                 dependencyCheckPublisher pattern: './**.xml'
-                sh 'pwd'
-                sh 'ls'
-                dependencyCheck additionalArguments: '--format HTML',odcInstallation:'SCA'
             }
         }
 }
