@@ -22,7 +22,7 @@ pipeline{
         }
         stage('SonarQube Analysis') {
             steps{
-                sh 'docker run --rm -e SONAR_HOST_URL="http://${SONARQUBE_URL}" -e SONAR_SCANNER_OPTS="-Dsonar.projectKey=${YOUR_PROJECT_KEY}" -e SONAR_LOGIN="sqa_31172b444768524438cfee0b78e1fa1dbe597928" -v "${YOUR_REPO}:/usr/src" sonarsource/sonar-scanner-c       }'
+                sh 'docker run --rm -e SONAR_HOST_URL="http://${SONARQUBE_URL}" -e SONAR_SCANNER_OPTS="-Dsonar.projectKey=${YOUR_PROJECT_KEY}" -e SONAR_LOGIN="sqa_31172b444768524438cfee0b78e1fa1dbe597928" -v "${YOUR_REPO}:/usr/src" sonarsource/sonar-scanner-c'
     }    }
 }
 }
