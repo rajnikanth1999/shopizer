@@ -1,8 +1,6 @@
 
 pipeline{
-    agent {
-        label 'node'
-    }
+    agent any
     stages{
         stage('build'){
             steps{
@@ -14,13 +12,8 @@ pipeline{
         stage('oush'){
             steps{
                 sh '''
-                docker image push praveenrajnikanth/workshop:shopizer
+                echo ''
                 '''
-            }
-        }
-        stage('kubernetes'){
-            steps{
-                build 'terraform'
             }
         }
     }    
