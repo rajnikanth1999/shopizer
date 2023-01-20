@@ -20,5 +20,10 @@ pipeline{
                 '''
             }
         }
+        stage('sca'){
+            steps{
+                dependencyCheck additionalArguments: '--format HTML',odcInstallation:'SCA'
+            }
+        }
 }
 }
